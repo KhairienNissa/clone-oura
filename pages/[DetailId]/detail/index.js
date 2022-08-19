@@ -34,7 +34,7 @@ function index() {
       <div>
         <MyModal />
 
-        <div className="md:flex md:justify-center mt-8 mx-12">
+        <div className="md:flex md:justify-center mt-8 md:mx-12">
           {/* kiri */}
           <DetailKiri item={state} />
 

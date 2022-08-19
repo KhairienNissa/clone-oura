@@ -26,7 +26,7 @@ function Navbar() {
     <div>
       <nav
     
-        className="md:px-12 w-full fixed top-0 shadow-2xl font-poppins z-10 dark:bg-white bg-[#212529]"
+        className="md:px-12 w-full fixed -top-1 shadow-2xl font-poppins z-10 dark:bg-white bg-[#212529]"
       >
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
