@@ -18,7 +18,7 @@ function index() {
   const [state, setState] = useState([]);
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/data/${id}`)
+      .get(`https://caca-db-oura.herokuapp.com/data/${id}`)
       .then((result) => {
         const response = result?.data;
         console.log(response);
@@ -43,7 +43,7 @@ function index() {
             <DetailKanan />
           </div>
         </div>
-        <BottomHome/>
+        <BottomHome />
         <FixedButton />
       </div>
     </>

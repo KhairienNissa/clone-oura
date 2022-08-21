@@ -30,8 +30,7 @@ export default function MyModal() {
 
   return (
     <>
-    
-      <Transition appear show={modal ? false : true} as={Fragment}>
+      <Transition appear show={modal ? false : isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-20" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
@@ -69,19 +68,20 @@ export default function MyModal() {
                         height="900px"
                       />
                       <ul className="text-xs text-white  dark:text-black text-semibold">
-                        <li className="bg-green-500">
+                        <li className="bg-[#00FF00] text-black py-1">
                           - Untuk Transfer Ke BCA a/n Messy Lusmitha Utami akan
                           delay sekitar 3-10 menit. Karena sistem dari bank BCA
                           Terutama Jika sedang EVENT. AKAN OFF PADA JAM 22:00 -
                           03:00 WIB.
                         </li>
-                        <li> - Selalu simpan nomor INVOICE</li>
-                        <li>
-                          - Status DONE = diamond sudah masuk ke akun kalian
+                        <li className="py-1"> - Selalu simpan nomor INVOICE</li>
+                        <li className="py-1 flex">
+                          - <p className="bg-[#00FF00] text-black">Status DONE </p>{" "}
+                          <p>= diamond sudah masuk ke akun kalian</p>
                         </li>
-                        <li>
-                          - Transfer sesuai totalan yang bewarna HIJAU jangan
-                          dilebihkan/dikurangi
+                        <li className=" py-1">
+                          - Transfer sesuai totalan <span className="bg-[#00FF00] text-black"> yang bewarna HIJAU jangan
+                          dilebihkan/dikurangi</span>
                         </li>
                       </ul>
 
@@ -94,7 +94,7 @@ export default function MyModal() {
                       <p>Updated: 2022-07-25 21:00:42</p>
                     </div>
                   </div>
-                  <div className="py-3 flex">
+                  <div className="py-3">
                     <div className="flex justify-start">
                       <div className="w-3 h-3 -mt-2 rounded-sm">
                         <input
@@ -111,7 +111,7 @@ export default function MyModal() {
                         Jangan Tampilkan lagi
                       </label>
                     </div>
-                    <div className="-mt-4 ml-[189px] md:ml-[560px]">
+                    <div className="flex justify-end w-full -mt-6 ">
                       <Button onClick={closeModal}>Tutup</Button>
                     </div>
                   </div>

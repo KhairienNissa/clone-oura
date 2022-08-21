@@ -14,9 +14,9 @@ function SearchHome() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/data")
+      .get("https://caca-db-oura.herokuapp.com/data")
       .then((result) => {
-        const response = result.data;
+        const response = result.data.data;
         console.log(response);
         setState(response);
       })
