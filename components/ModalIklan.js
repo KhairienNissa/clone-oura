@@ -105,7 +105,7 @@ export default function MyModal() {
                         />
                       </div>
                       <label
-                        for="vehicle1"
+                        htmlFor="vehicle1"
                         className="text-white text-[10px] -mt-1 px-2  dark:text-black"
                       >
                         Jangan Tampilkan lagi

@@ -23,8 +23,8 @@ function Convenience() {
         
         {/* bagian dalam */}
         <div className={` ${ !active && "hidden"}`}>
-            {ConvenienceData.map((item => (
-              <InfoPembayaran item={item}/>
+            {ConvenienceData.map(((item, index) => (
+              <InfoPembayaran item={item} key={index}/>
             )))}
     
           </div>

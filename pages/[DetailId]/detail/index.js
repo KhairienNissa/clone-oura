@@ -11,7 +11,7 @@ import Logoo from "../../../components/Logo";
 import { useRouter } from "next/router";
 import FixedButton from "../../../components/FixedButton";
 
-function index() {
+function Index() {
   const router = useRouter();
   const id = router.query.DetailId;
 
@@ -50,4 +50,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;

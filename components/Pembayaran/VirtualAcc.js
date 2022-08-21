@@ -23,8 +23,8 @@ function VirtualAcc() {
 
         {/* dalam */}
         <div className={` ${!active && "hidden"}`}>
-          {VirtualaccData.map((item) => (
-            <InfoPembayaran item={item} />
+          {VirtualaccData.map((item, index) => (
+            <InfoPembayaran item={item} key={index}/>
           ))}
         </div>
 

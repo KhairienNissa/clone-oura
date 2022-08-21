@@ -6,28 +6,28 @@ import { BiCalculator } from "react-icons/bi";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import { Switch } from "@headlessui/react";
 import DropDownNav from "./atom/DropDownNav";
-import {useTheme} from 'next-themes'
+import { useTheme } from "next-themes";
 import { Transition } from "@headlessui/react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 function Navbar() {
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [navbar, setNavbar] = useState(false);
+  const Router = useRouter();
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  if(!mounted) return null;
+  if (!mounted) return null;
 
-  const currentTheme = theme === 'system' ? systemTheme : theme;
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
     <div>
-      <nav
-    
-        className="md:px-12 w-full fixed -top-1 shadow-2xl font-poppins z-10 dark:bg-white bg-[#212529]"
-      >
+      <nav className="md:px-12 w-full fixed -top-1 shadow-2xl font-poppins z-10 dark:bg-white bg-[#212529]">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex md:flex items-center justify-between py-4 md:py-2">
@@ -36,15 +36,19 @@ function Navbar() {
               </a>
               <div className="md:mx-5">
                 <Switch
-                  onChange={()=>setTheme(currentTheme === 'light' ? 'dark' : 'light')}
+                  onChange={() =>
+                    setTheme(currentTheme === "light" ? "dark" : "light")
+                  }
                   className={`${
-                    currentTheme === 'light' ? "bg-logo-color" : "bg-white border"
+                    currentTheme === "light"
+                      ? "bg-logo-color"
+                      : "bg-white border"
                   } relative inline-flex h-4 w-8 items-center rounded-full`}
                 >
                   <span className="sr-only">Enable notifications</span>
                   <span
                     className={`${
-                      currentTheme === 'light'
+                      currentTheme === "light"
                         ? "translate-x-4 bg-white"
                         : "translate-x-1 bg-logo-color"
                     } inline-block h-3 w-3 transform rounded-full duration-300`}
@@ -88,9 +92,9 @@ function Navbar() {
                     <div className="text-md mr-1">
                       <FaHome />
                     </div>
-                    <a href="/" className="-mt-0.5 text-sm">
-                      Home
-                    </a>
+                    <Link href="/">
+                      <p className="-mt-0.5 text-sm">Home</p>
+                    </Link>
                   </div>
                 </li>
                 <li className=" text-white dark:text-abu-abu py-1 md:py-0 hover:text-opacity-90 text-opacity-50 dark:hover:font-semibold hover:cursor-pointer  ">
@@ -98,9 +102,9 @@ function Navbar() {
                     <div className="text-md mr-1">
                       <HiSearch />
                     </div>
-                    <a href="/CekInvoice" className="text-sm -mt-0.5">
-                      Check Invoice
-                    </a>
+                    <Link href="/CekInvoice">
+                      <p className="text-sm -mt-0.5">Check Invoice</p>
+                    </Link>
                   </div>
                 </li>
                 <li className="text-white dark:text-abu-abu py-1 md:py-0 hover:text-opacity-90  text-opacity-50  hover:cursor-pointer dark:hover:font-semibold ">

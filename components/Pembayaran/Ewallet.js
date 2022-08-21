@@ -22,8 +22,8 @@ function Ewallet() {
         </div>
 
         <div className={` ${!active && "hidden"}`}>
-          {ewalletdata.map((item) => (
-            <InfoPembayaran item={item} />
+          {ewalletdata.map((item, index) => (
+            <InfoPembayaran item={item} key={index} />
           ))}
         </div>
 

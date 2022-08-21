@@ -30,20 +30,24 @@ function BankTransfer() {
 
           {/* bagian dalam */}
           <div className={` ${active ? "block" : "hidden"}`}>
-            {item.map((item) => (
-              <InfoPembayaran item={item} />
+            {item.map((item, index) => (
+              <InfoPembayaran item={item} key={index} />
             ))}
 
             <div></div>
           </div>
         </div>
         <div className="bg-abu-abu dark:bg-neutral-300 py-4 px-2 flex justify-end rounded-b-md">
-          {item.map((item) => (
-            <BgMethode item={item} className={`${active && "hidden"}`} />
+          {item.map((item, index) => (
+            <BgMethode
+              item={item}
+              key={index}
+              className={`${active && "hidden"}`}
+            />
           ))}
 
           <div
-    className="text-xl hover:cursor-pointer"
+            className="text-xl hover:cursor-pointer"
             onClick={() => setActive(!active)}
           >
             {active ? <RiArrowDropUpLine /> : <RiArrowDropDownLine />}
