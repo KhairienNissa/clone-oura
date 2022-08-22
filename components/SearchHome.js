@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { HiSearch } from "react-icons/hi";
 import axios from "axios";
-import Mlegend from "../public/ml.png";
-import Image from "next/image"
 import ResultSearch from "./atom/resultSearch";
 import { useRouter } from "next/router";
 
@@ -11,6 +9,25 @@ function SearchHome() {
   const Router = useRouter()
   const [state, setState] = useState([]);
   const [search, setSearch] = useState("");
+
+  function useOutsideAlerter(ref) {
+    useEffect(() => {
+      /**
+       * Alert if clicked on outside of element
+       */
+      function handleClickOutside(event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+        setSearch(search)
+        }
+      }
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [ref]);
+  }
 
   useEffect(() => {
     axios
@@ -29,6 +46,9 @@ function SearchHome() {
     item.title.toLowerCase().includes(search)
   );
 
+  const wrapperRef = useRef(null);
+  useOutsideAlerter(wrapperRef);
+  
   return (
     <div>
       <div>
@@ -45,7 +65,7 @@ function SearchHome() {
             <HiSearch />
           </button>
         </div>
-        <div className={` ${!search && "hidden" } max-h-[450px] overflow-x-scroll absolute w-full overflow-y-scroll bg-abu-abu md:w-[250px] md:ml-48 `}>
+        <div ref={wrapperRef} className={` ${!search && "hidden" } max-h-[450px] overflow-x-scroll absolute w-full overflow-y-scroll bg-abu-abu md:w-[250px] md:ml-48 `}>
           <h1 className="text-white dark:text-white p-3 md:p-2 md:text-[14px] border-b  ">Top Up</h1>
           
        {DataSearch.map((item) =>(

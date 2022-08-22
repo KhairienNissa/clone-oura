@@ -12,11 +12,10 @@ function DropDownNav() {
           Calculator ML
         </Menu.Button>
         <div
-          className={` dark:border px-3 mt-2 relative md:absolute z-10 w-96 md:w-auto rounded-md bg-white ${
+          className={`dark:border -ml-4 px-3 py-3 mt-3 relative md:absolute z-10 w-96 md:w-auto rounded-sm bg-white ${
             !aktif && "hidden"
-          } py-2`}
-        >
-          <Menu.Items className="py-2">
+          } py-2`}>
+          <Menu.Items className="py-3">
             <Menu.Item>
               <Link href="/HpMagic">
                 <a className="text-black flex text-sm">

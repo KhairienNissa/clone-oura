@@ -1,9 +1,21 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import CoverFire from "../../public/coverfire.png";
 import Image from "next/image";
 import Router from "next/router";
+import { useTheme } from "next-themes";
 
 function CardProducts({ item }) {
+  const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  const currentTheme = theme === "system" ? systemTheme : theme;
+
   return (
     <div
       onClick={() => Router.push(`/${item.id}/detail`)}
@@ -12,12 +24,11 @@ function CardProducts({ item }) {
       <div className="w-auto h-auto  rounded-md shadow-2xl">
         <img
           src={item.image}
-          className="object-cover w-full rounded-t-xl h-36"
+          className="object-cover w-full rounded-t-md h-36"
         />
         <svg
-          className="-mt-7 "
-          fill="#212529"
-          xmlns="http://www.w3.org/2000/svg"
+          className="-mt-6 "
+          fill={`${currentTheme === 'light' ? "#212529" : "#ffff"}`}          xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
         >
           <path

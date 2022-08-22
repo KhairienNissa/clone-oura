@@ -1,18 +1,17 @@
 import React from "react";
 import TopUp from "./atom/topUp";
-import MLegends from "../public/ml.png";
-import Image from "next/image";
 
 function DetailKiri({ item }) {
   return (
     <div>
       <div className="m-3 w-12/12  md:2/12">
-        <div className="w-full p-4 shadow-2xl rounded-md dark:border-gray-300 border border-gray-800">
+        <div className="w-full pb-5 px-2 shadow-2xl rounded-md dark:border-gray-300 border border-gray-800">
           <div className="hidden text-center md:flex justify-center">
             <img src={item.image} width="150px" height="150px" />
           </div>
-          <div className="py-5 px-3">
-            <TopUp>{item.title}</TopUp>
+          <div className="py-3 px-3 md:text-[25px]">
+          <div className='text-white dark:text-black mt-2 text-[25px]'>{item.title}</div>
+        <div className='mt-2 w-[63px] bg-logo-color h-[5px] rounded-sm'></div>
           </div>
 
           <div className="float-left md:hidden mx-3">
@@ -34,7 +33,7 @@ function DetailKiri({ item }) {
             <p>5. Klik Beli dan lakukan Pembayaran</p>
             <p>6. Diamond akan masuk otomatis ke akun anda</p>
           </div>
-          <div className="text-orange-400 text-lg text-center mt-3 font-semibold">
+          <div className="text-orange-400 text-md text-center mt-3 font-semibold">
             Top Up Buka 24 Jam
           </div>
         </div>

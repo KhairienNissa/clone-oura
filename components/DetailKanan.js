@@ -10,9 +10,9 @@ function DetailKanan() {
   return (
     <>
       {/* lengkapi data */}
-      <div className=" mt-3 shadow-2xl border rounded-md dark:border-gray-300 border-gray-800 mx-3 my-3 p-4">
-        <h1 className="text-white text-lg md:mx-3 dark:text-black  dark:border-gray-300 border-b border-gray-700">Lengkapi Data</h1>
-        <div className="md:flex mt-2">
+      <div className=" mt-3 shadow-2xl border rounded-md dark:border-gray-300 border-gray-800 mx-3 my-3">
+        <h1 className="text-white w-full p-4 text-lg  dark:text-black  dark:border-gray-300 border-b border-gray-700 dark:bg-[#F0F1F2]">Lengkapi Data</h1>
+        <div className="md:flex mt-2 px-4">
           <div className="mt-5 md:w-6/12 md:mt-3 md:mx-3">
             <label className="text-white dark:text-black" htmlFor="user">
               User ID
@@ -21,27 +21,27 @@ function DetailKanan() {
             <input
               type="number"
               placeholder="Masukan User ID"
-              className=" dark:bg-white dark:border-2 w-full p-2 placeholder:text-md rounded-md dark:text-black"
+              className=" dark:bg-white dark:border-2 w-full p-1.5 placeholder:text-sm rounded-md dark:text-black"
             />
           </div>
           <div className="mt-3 md:w-6/12">
             <label className="text-white dark:text-black" htmlFor="user">
               Server ID
-            </label>{" "}
+            </label>
             <br />
             <input
               type="number"
               placeholder="Masukan Server ID"
-              className="dark:bg-white dark:text-black dark:border-2 w-full p-2 placeholder:text-md rounded-md"
+              className="dark:bg-white dark:text-black dark:border-2 w-full p-1.5 placeholder:text-sm  placeholder:text-md rounded-md"
             />
           </div>
         </div>
-        <Button className="rounded-md md:ml-3 mt-4">Petunjuk</Button>
+        <Button className="rounded-md md:ml-7 ml-4 mt-4 mb-4">Petunjuk</Button>
       </div>
 
       {/* nominal */}
-      <div className="shadow-2xl border rounded-md dark:border-gray-300 border-gray-800 mt-3 mx-3 my-3 p-4">
-        <h1 className="text-white text-lg md:mx-3 dark:text-black  dark:border-gray-300 border-b border-gray-700">Pilih Nominal</h1>
+      <div className="shadow-2xl border rounded-md dark:border-gray-300 border-gray-800 mt-3 mx-3 my-3">
+        <h1 className="text-white text-lg md:mx-3 dark:text-black  dark:border-gray-300 border-b border-gray-700 dark:bg-[#F0F1F2] w-full p-3">Pilih Nominal</h1>
         <div className="grid grid-cols-2 md:grid-cols-3 my-2">
           <Nominal />
           <Nominal />

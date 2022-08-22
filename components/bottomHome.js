@@ -1,8 +1,10 @@
 import React from "react";
 import Logoo from "./Logo";
 import { IoIosArrowForward } from "react-icons/io";
+import { useRouter } from "next/router";
 
 function BottomHome() {
+  const Router = useRouter();
   return (
     <div className="pt-11 py-1 shadow-2xl dark:border">
       <div className="md:flex md:justify-center">
@@ -31,21 +33,32 @@ function BottomHome() {
               <div className="text-logo-color text-sm">
                 <IoIosArrowForward />
               </div>
-              <div className="-mt-1 text-sm text-white dark:text-black">Home</div>
+              <div
+                onClick={() => Router.push("/")}
+                className="-mt-1 text-sm text-white dark:text-black hover:cursor-pointer"
+              >
+                Home
+              </div>
             </div>
             <div className="flex mx-7 my-4">
-              <div className="text-logo-color text-md">
+              <div className="text-logo-color text-sm">
                 <IoIosArrowForward />
               </div>
-              <div className="-mt-1 text-sm text-white dark:text-black">
+              <div
+                onClick={() => Router.push("/CekInvoice")}
+                className="-mt-1 text-sm text-white dark:text-black hover:cursor-pointer"
+              >
                 Hitung Point Magic Wheel
               </div>
             </div>
             <div className="flex mx-7 my-4">
-              <div className="text-logo-color text-md">
+              <div className="text-logo-color text-sm">
                 <IoIosArrowForward />
               </div>
-              <div className="-mt-1 text-md text-white dark:text-black">
+              <div
+                onClick={() => Router.push("/HpZodiac")}
+                className="-mt-1 text-sm text-white dark:text-black hover:cursor-pointer"
+              >
                 Hitung Point Zodiac
               </div>
             </div>
@@ -53,25 +66,34 @@ function BottomHome() {
         </div>
 
         <div className="pb-11">
-          <h1 className="text-lg text-white mx-3 dark:text-black">Other Services</h1>
+          <h1 className="text-lg text-white mx-3 dark:text-black">
+            Other Services
+          </h1>
           <div>
             <div className="flex mx-7 my-4">
               <div className="text-logo-color text-sm">
                 <IoIosArrowForward />
               </div>
-              <div className="-mt-1 text-md text-white dark:text-black">Mobile Legends</div>
+              <div
+                onClick={() => Router.push("/1/detail")}
+                className="-mt-1 text-sm text-white dark:text-black hover:cursor-pointer"
+              >
+                Mobile Legends
+              </div>
             </div>
             <div className="flex mx-7 my-4">
               <div className="text-logo-color text-sm">
                 <IoIosArrowForward />
               </div>
-              <div className="-mt-1 text-md text-white dark:text-black">Free Fire</div>
+              <div onClick={() => Router.push("/2/detail")} className="-mt-1 text-sm text-white dark:text-black hover:cursor-pointer">
+                Free Fire
+              </div>
             </div>
             <div className="flex mx-7 my-4">
               <div className="text-logo-color text-sm">
                 <IoIosArrowForward />
               </div>
-              <div className="-mt-1 text-md text-white dark:text-black">
+              <div onClick={() => Router.push("/5/detail")} className="-mt-1 text-sm text-white dark:text-black hover:cursor-pointer">
                 Call of Duty Mobile
               </div>
             </div>
@@ -79,13 +101,17 @@ function BottomHome() {
               <div className="text-logo-color text-sm">
                 <IoIosArrowForward />
               </div>
-              <div className="-mt-1 text-md text-white dark:text-black">Arena if Valor</div>
+              <div onClick={() => Router.push("/6/detail")} className="-mt-1 text-sm text-white dark:text-black hover:cursor-pointer">
+                Arena if Valor
+              </div>
             </div>
             <div className="flex mx-7 my-4">
               <div className="text-logo-color text-sm">
                 <IoIosArrowForward />
               </div>
-              <div className="-mt-1 text-md text-white dark:text-black"> Sausage Man</div>
+              <div onClick={() => Router.push("/8/detail")} className="-mt-1 text-sm text-white dark:text-black hover:cursor-pointer">
+                Sausage Man
+              </div>
             </div>
           </div>
         </div>

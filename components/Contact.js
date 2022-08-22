@@ -25,7 +25,7 @@ function Contact() {
         <Transition
           show={isActive}
           enter="transform transition duration-[400ms] "
-          enterFrom="opacity-0 scale-12 translate-x-4 translate-y-4"
+          enterFrom="opacity-0 translate-x-4 translate-y-4"
           enterTo="opacity-100 rotate-0 scale-100"
           leave="transform duration-400 transition ease-in-out "
           leaveFrom="scale-2 "

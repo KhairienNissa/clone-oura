@@ -12,9 +12,9 @@ function VirtualAcc() {
     <div>
       <div className=" mt-3 shadow-2xl rounded-md mx-1 border border-gray-500">
         <div className=" bg-abu-muda dark:bg-white p-3 grid grid-cols-2 rounded-t-lg">
-          <div className="text-white text-sm font-bold flex mt-2">
+          <div className="text-white  dark:text-black  text-sm font-bold flex mt-2">
             <AiFillCreditCard />
-            <p className="-mt-1 ml-2">Virtual Account</p>
+            <p className="-mt-1 ml-2  dark:text-black ">Virtual Account</p>
           </div>
           <div className="text-white dark:text-black text-sm flex mt-1 justify-end">
             Rp. 140.000

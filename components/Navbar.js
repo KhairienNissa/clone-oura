@@ -30,7 +30,7 @@ function Navbar() {
       <nav className="md:px-12 w-full fixed -top-1 shadow-2xl font-poppins z-10 dark:bg-white bg-[#212529]">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
-            <div className="flex md:flex items-center justify-between py-4 md:py-2">
+            <div onClick={()=> Router.push('/')} className="flex md:flex items-center justify-between py-4 md:py-2">
               <a>
                 <Logoo />
               </a>
@@ -58,7 +58,7 @@ function Navbar() {
 
               <div className="md:hidden">
                 <button
-                  className="py-2 px-4 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border-4 border border-slate-400"
+                  className="py-1.5 px-3.5 text-gray-300 rounded-md outline-none focus:border-gray-400 focus:border-4 border border-slate-700"
                   onClick={() => setNavbar(!navbar)}
                 >
                   <svg
@@ -82,7 +82,7 @@ function Navbar() {
 
           <div>
             <div
-              className={`flex-1  justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0  ${
+              className={`flex-1  justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 transform  ${
                 navbar ? "block" : "hidden"
               }`}
             >

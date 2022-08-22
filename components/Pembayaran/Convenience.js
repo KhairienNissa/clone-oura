@@ -11,12 +11,12 @@ function Convenience() {
   return (
     <div>
       <div className=" mt-3  border-gray-500 shadow-2xl rounded-md mx-1 border">
-        <div className=" bg-abu-muda p-3 grid grid-cols-2 rounded-t-lg">
-          <div className="text-white text-sm font-bold flex mt-2">
+        <div className=" bg-abu-muda dark:bg-white p-3 grid grid-cols-2 rounded-t-lg">
+          <div className="text-white dark:text-black text-sm font-bold flex mt-2">
             <FaStore />
-            <p className="-mt-1 ml-2">Convenience Store</p>
+            <p className="-mt-1 ml-2 ">Convenience Store</p>
           </div>
-          <div className="text-white text-sm flex mt-1 justify-end">
+          <div className="text-white text-sm flex mt-1 justify-end  dark:text-black ">
             Rp. 140.000
           </div>
         </div>
