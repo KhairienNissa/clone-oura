@@ -53,7 +53,7 @@ function SearchHome() {
     <div>
       <div>
         <div>
-        <div className="flex justify-center md:justify-start mx-2 md:mx-0">
+        <div   className="flex justify-center md:justify-start mx-2 md:mx-0">
           <input
             className="dark:text-black h-10 w-11/12 md:w-2/12 px-3 md:ml-20 lg:ml-48 dark:bg-white dark:border rounded-l-sm placeholder:text-sm"
             placeholder="Search Products..."

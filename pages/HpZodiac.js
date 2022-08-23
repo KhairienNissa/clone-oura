@@ -36,7 +36,7 @@ function HpZodiac() {
             </div>
           </div>
         </div>
-        <BottomHome/>
+
         <FixedButton/>
 
     </div>

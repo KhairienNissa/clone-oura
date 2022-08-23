@@ -41,7 +41,7 @@ function DetailKanan() {
 
       {/* nominal */}
       <div className="shadow-2xl border rounded-md dark:border-gray-300 border-gray-800 mt-3 mx-3 my-3">
-        <h1 className="text-white text-lg md:mx-3 dark:text-black  dark:border-gray-300 border-b border-gray-700 dark:bg-[#F0F1F2] w-full p-3">Pilih Nominal</h1>
+        <h1 className="text-white text-lg dark:text-black  dark:border-gray-300 border-b border-gray-700 dark:bg-[#F0F1F2] w-full p-3">Pilih Nominal</h1>
         <div className="grid grid-cols-2 md:grid-cols-3 my-2">
           <Nominal />
           <Nominal />

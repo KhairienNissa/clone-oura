@@ -27,7 +27,7 @@ function Index() {
       .catch((err) => {
         console.log("error", err);
       });
-  }, []);
+  }, [id]);
 
   return (
     <>
@@ -43,7 +43,6 @@ function Index() {
             <DetailKanan />
           </div>
         </div>
-        <BottomHome />
         <FixedButton />
       </div>
     </>

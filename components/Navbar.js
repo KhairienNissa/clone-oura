@@ -31,10 +31,10 @@ function Navbar() {
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div
-              onClick={() => Router.push("/")}
-              className="flex md:flex items-center justify-between py-4 md:py-2"
+              
+              className="flex md:flex items-center justify-between py-2 md:py-2"
             >
-              <a>
+              <a className="hover:cursor-pointer" onClick={() => Router.push("/")}>
                 <Logoo />
               </a>
               <div className="md:mx-5">
@@ -61,7 +61,7 @@ function Navbar() {
 
               <div className="md:hidden">
                 <button
-                  className="py-1.5 px-3.5 text-gray-300 rounded-md outline-none focus:border-gray-400 focus:border-4 border border-slate-700"
+                  className="py-1.5 px-3.5 text-gray-300 rounded-md outline-none focus:border-gray-400 focus:border-4 border border-slate-700 dark:border-slate-300"
                   onClick={() => setNavbar(!navbar)}
                 >
                   <svg

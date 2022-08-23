@@ -4,7 +4,7 @@ import Image from 'next/image'
 function ResultSearch({item, onClick}) {
   return (
     <> 
-    <div onClick={onClick} className="flex h-auto py-2 px-3 border-b">
+    <div onClick={onClick} className="flex hover:cursor-pointer h-auto py-2 px-3 border-b">
     <div>
       <img src={item.image} className="w-[100px] h-[100px] md:w-[40px] md:h-[40px]"/>
     </div>

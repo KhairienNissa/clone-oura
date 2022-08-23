@@ -6,7 +6,7 @@ function DetailKiri({ item }) {
     <div>
       <div className="m-3 w-12/12  md:2/12">
         <div className="w-full pb-5 px-2 shadow-2xl rounded-md dark:border-gray-300 border border-gray-800">
-          <div className="hidden text-center md:flex justify-center">
+          <div className="hidden mt-3 text-center md:flex justify-center">
             <img src={item.image} width="150px" height="150px" />
           </div>
           <div className="py-3 px-3 md:text-[25px]">

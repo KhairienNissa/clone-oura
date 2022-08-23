@@ -31,7 +31,7 @@ export default function MyModal() {
   return (
     <>
       <Transition appear show={modal ? false : isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-20" onClose={closeModal}>
+        <Dialog as="div" className="relative z-20 " onClose={closeModal}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -41,10 +41,10 @@ export default function MyModal() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black bg-opacity-50" />
+            <div className="fixed inset-0 bg-black bg-opacity-50 items-center" />
           </Transition.Child>
 
-          <div className="fixed inset-0 overflow-y-scroll">
+          <div className="fixed inset-0 overflow-y-hidden">
             <div className="flex items-center justify-center p-4 text-center">
               <Transition.Child
                 as={Fragment}
@@ -55,7 +55,7 @@ export default function MyModal() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="dark:bg-white bg-[#212529] w-full md:w-8/12 h-[550px] transform overflow-y-scroll rounded-md p-4 text-left align-middle shadow-3xl transition-all">
+                <Dialog.Panel className="dark:bg-white bg-[#212529] w-full md:w-[800px] h-screen transform overflow-y-scroll rounded-md p-4 text-left align-middle shadow-3xl transition-all">
                   <div className="border-2 border-abu-abu rounded-sm">
                     <Dialog.Title className="text-lg w-full h-auto px-2 pt-2 pb-3 rounded-t-sm bg-abu-abu text-white  ">
                       PERHATIKAN
@@ -76,12 +76,18 @@ export default function MyModal() {
                         </li>
                         <li className="py-1"> - Selalu simpan nomor INVOICE</li>
                         <li className="py-1 flex">
-                          - <p className="bg-[#00FF00] text-black">Status DONE </p>{" "}
+                          -{" "}
+                          <p className="bg-[#00FF00] text-black">
+                            Status DONE{" "}
+                          </p>{" "}
                           <p>= diamond sudah masuk ke akun kalian</p>
                         </li>
                         <li className=" py-1">
-                          - Transfer sesuai totalan <span className="bg-[#00FF00] text-black"> yang bewarna HIJAU jangan
-                          dilebihkan/dikurangi</span>
+                          - Transfer sesuai totalan{" "}
+                          <span className="bg-[#00FF00] text-black">
+                            {" "}
+                            yang bewarna HIJAU jangan dilebihkan/dikurangi
+                          </span>
                         </li>
                       </ul>
 

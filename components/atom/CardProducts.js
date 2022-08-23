@@ -4,7 +4,8 @@ import Image from "next/image";
 import Router from "next/router";
 import { useTheme } from "next-themes";
 
-function CardProducts({ item }) {
+
+function CardProducts({ item}) {
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -21,13 +22,13 @@ function CardProducts({ item }) {
       onClick={() => Router.push(`/${item.id}/detail`)}
       className="hover:cursor-pointer mx-0.5 mt-3 justify-center"
     >
-      <div className="w-auto h-auto  rounded-md shadow-2xl">
+      <div className="w-auto h-full  rounded-md shadow-2xl">
         <img
           src={item.image}
           className="object-cover w-full rounded-t-md h-36"
         />
         <svg
-          className="-mt-6 "
+          className="-mt-5 "
           fill={`${currentTheme === 'light' ? "#212529" : "#ffff"}`}          xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
         >

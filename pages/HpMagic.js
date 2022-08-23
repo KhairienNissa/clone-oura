@@ -47,7 +47,7 @@ function HpMagic() {
         </div>
       </div>
 
-      <BottomHome />
+ 
       <FixedButton />
     </div>
   );

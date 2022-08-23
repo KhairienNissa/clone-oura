@@ -3,6 +3,7 @@ import {CgNotes} from 'react-icons/cg'
 import BottomHome from '../components/bottomHome'
 import Button from '../components/atom/Button'
 import FixedButton from '../components/FixedButton'
+import First from '../components/First'
 
 function CekInvoice() {
   return (
@@ -20,7 +21,9 @@ function CekInvoice() {
             <Button>Check</Button></div>
         </div>
       </div>
-      <BottomHome/>
+
+      <First/>
+
       <FixedButton/>
     </div>
   )
