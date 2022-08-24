@@ -10,7 +10,7 @@ function VirtualAcc() {
   const [active, setActive] = useState(false);
   return (
     <div>
-      <div className=" mt-3 shadow-2xl rounded-md mx-1 border border-gray-500">
+      <div className=" mt-3  border-gray-500 shadow-2xl rounded-md mx-1 border hover:border-orange-300 hover:cursor-pointer">
         <div className=" bg-abu-muda dark:bg-white p-3 grid grid-cols-2 rounded-t-lg">
           <div className="text-white  dark:text-black  text-sm font-bold flex mt-2">
             <AiFillCreditCard />
@@ -24,13 +24,20 @@ function VirtualAcc() {
         {/* dalam */}
         <div className={` ${!active && "hidden"}`}>
           {VirtualaccData.map((item, index) => (
-            <InfoPembayaran item={item} key={index}/>
+            <InfoPembayaran item={item} key={index} />
           ))}
         </div>
 
-        <div className="bg-abu-abu dark:bg-neutral-300 py-4 px-2 flex flex-wrap  justify-end rounded-b-md">
+        <div
+          onClick={() => setActive(!active)}
+          className="bg-abu-abu dark:bg-neutral-300 py-4 px-2 flex flex-wrap  justify-end rounded-b-md"
+        >
           {VirtualaccData.map((item, index) => (
-            <BgMethode item={item} key={index} className={`${active && "hidden"}`} />
+            <BgMethode
+              item={item}
+              key={index}
+              className={`${active && "hidden"}`}
+            />
           ))}
           <div
             className="text-xl hover:cursor-pointer"

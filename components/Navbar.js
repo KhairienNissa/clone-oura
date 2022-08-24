@@ -7,7 +7,6 @@ import { MdOutlineArrowDropDown } from "react-icons/md";
 import { Switch } from "@headlessui/react";
 import DropDownNav from "./atom/DropDownNav";
 import { useTheme } from "next-themes";
-import { Transition } from "@headlessui/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -27,7 +26,7 @@ function Navbar() {
 
   return (
     <div>
-      <nav className="md:px-12 w-full fixed -top-1 shadow-2xl font-poppins z-10 dark:bg-white bg-[#212529]">
+      <nav className="md:px-12 w-full fixed -top-1 shadow-2xl font-poppins z-30 dark:bg-white bg-[#212529]">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div

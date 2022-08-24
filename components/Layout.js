@@ -6,12 +6,15 @@ import BottomHome from "./bottomHome";
 function Layout({ children }) {
   return (
     <>
-      <div className="bg-[#212529] dark:bg-white w-full h-full flex flex-col items-stretch">
+      <div className="bg-[#212529] dark:bg-white flex flex-col min-h-screen max-h-full ">
+        <header className="flex items-start">
         <Navbar />
-        <main className="pt-16 flex-grow-1 flex-shrink-0">{children}</main>
-        <footer className="flex-shrink-0">
+        </header>
+        <main className="pt-16">{children}</main>
+        <footer className="mt-6 w-full">
+          <div >
           <BottomHome />
-          <Copyright />
+          <Copyright /></div>
         </footer>
       </div>
     </>

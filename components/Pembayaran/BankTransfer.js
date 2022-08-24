@@ -16,7 +16,7 @@ function BankTransfer() {
   ];
   return (
     <div>
-    <div className=" mt-3  border-gray-500 shadow-2xl rounded-md mx-1 border">
+    <div className=" mt-3  border-gray-500 shadow-2xl rounded-md mx-1 border hover:border-orange-300 hover:cursor-pointer">
       <div className=" bg-abu-muda p-3 grid grid-cols-2 rounded-t-lg dark:bg-white ">
         <div className="text-white text-sm font-bold flex dark:text-black mt-2">
           <AiFillBank />
@@ -33,11 +33,11 @@ function BankTransfer() {
         ))}
       </div>
 
-      <div className="bg-abu-abu dark:bg-neutral-300 py-4 px-2 flex flex-wrap justify-end rounded-b-md">
+      <div  onClick={() => setActive(!active)} className="bg-abu-abu dark:bg-neutral-300 py-4 px-2 flex flex-wrap justify-end rounded-b-md">
         {item.map((item, index) => (
           <BgMethode item={item} key={index} className={`${active && "hidden"}`} />
         ))}
-        <div className="text-xl hover:cursor-pointer" onClick={() => setActive(!active)}>
+        <div className="text-xl hover:cursor-pointer">
             {active ? <RiArrowDropUpLine /> : <RiArrowDropDownLine />}
           </div>
       </div>
