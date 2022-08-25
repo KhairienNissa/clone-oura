@@ -60,7 +60,7 @@ function Navbar() {
 
               <div className="md:hidden">
                 <button
-                  className="py-1.5 px-3.5 text-gray-300 rounded-md outline-none focus:border-gray-400 focus:border-4 border border-slate-700 dark:border-slate-300"
+                  className="py-1.5 px-3.5 text-gray-300 rounded-md outline-none focus:border-gray-400 dark:focus:border-gray-700 focus:border-4 border border-slate-700 dark:border-slate-300"
                   onClick={() => setNavbar(!navbar)}
                 >
                   <svg
@@ -83,19 +83,20 @@ function Navbar() {
           </div>
 
           <div>
+        
             <div
-              className={`flex-1  justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0  ${
+              className={`flex-1  justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 transition ${
                 navbar ? "block" : "hidden"
               }`}
             >
-              <ul className="items-center justify-center md:flex md:space-x-6 md:space-y-0 space-y-3 -mt-9 md:mt-0">
+              <ul className="items-center transition ease-out justify-center md:flex md:space-x-6 md:space-y-0 space-y-3 -mt-9 md:mt-0">
                 <li className=" text-white py-1 md:py-0 dark:text-abu-abu dark:hover:font-semibold hover:text-opacity-90 text-opacity-50 hover:cursor-pointer ">
                   <div className="flex">
                     <div className="text-md mr-1">
                       <FaHome />
                     </div>
                     <Link href="/">
-                      <p className="-mt-0.5 text-sm">Home</p>
+                      <p className="-mt-0.5 text-sm ">Home</p>
                     </Link>
                   </div>
                 </li>
@@ -105,12 +106,12 @@ function Navbar() {
                       <HiSearch />
                     </div>
                     <Link href="/CekInvoice">
-                      <p className="text-sm -mt-0.5">Check Invoice</p>
+                      <p className="text-sm -mt-0.5 ">Check Invoice</p>
                     </Link>
                   </div>
                 </li>
                 <li className="text-white dark:text-abu-abu py-1 md:py-0 hover:text-opacity-90  text-opacity-50  hover:cursor-pointer dark:hover:font-semibold ">
-                  <div className="flex">
+                  <div className="flex ">
                     <div className="text-md mr-1">
                       <BiCalculator />
                     </div>

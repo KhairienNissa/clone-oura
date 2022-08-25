@@ -31,7 +31,7 @@ export default function MyModal() {
   return (
     <>
       <Transition appear show={modal ? false : isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-20 " onClose={closeModal}>
+        <Dialog as="div" className="relative z-50 " onClose={closeModal}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -55,7 +55,7 @@ export default function MyModal() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="dark:bg-white bg-[#212529] w-full md:w-[800px] h-screen transform overflow-y-scroll rounded-md p-4 text-left align-middle shadow-3xl transition-all">
+                <Dialog.Panel className="dark:bg-white  bg-[#212529] h-[100vh] md:h-[95vh] md:w-[800px] transform overflow-y-scroll rounded-md p-4 text-left align-middle shadow-3xl transition-all">
                   <div className="border-2 border-abu-abu rounded-sm">
                     <Dialog.Title className="text-lg w-full h-auto px-2 pt-2 pb-3 rounded-t-sm bg-abu-abu text-white  ">
                       PERHATIKAN
