@@ -66,7 +66,7 @@ function SearchHome() {
         ref={wrapperRef}
         className={` ${
           !search && "hidden"
-        } max-h-[450px] overflow-x-scroll absolute w-full overflow-y-scroll bg-abu-abu md:w-[250px] md:ml-48 `}
+        } max-h-[450px] overflow-x-scroll absolute w-full overflow-y-scroll bg-abu-abu md:w-[250px] md:ml-56 `}
       >
         <h1 className="text-white dark:text-white p-3 md:p-2 md:text-[14px] border-b  ">
           Top Up

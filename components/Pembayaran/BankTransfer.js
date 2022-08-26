@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import BgMethode from "../atom/bgMethode";
 import { AiFillBank } from "react-icons/ai";
 import { RiArrowDropUpLine } from "react-icons/ri";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import InfoPembayaran from "./infoPembayaran";
+import { Transition } from "@headlessui/react";
 
 function BankTransfer() {
   const [active, setActive] = useState(false);
+  const contentAnimation = useRef()
   const item = [
     {
       name: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/2560px-Bank_Central_Asia.svg.png",
@@ -26,7 +28,7 @@ function BankTransfer() {
           Rp. 140.000
         </div>
       </div>
-
+      
       <div className={` ${!active && "hidden"}`}>
         {item.map((item, index) => (
           <InfoPembayaran item={item} key={index} />

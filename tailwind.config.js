@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  darkMode : "class",
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
@@ -15,7 +15,7 @@ module.exports = {
         "abu-muda": "#282c30",
       },
       fontFamily: {
-        poppins: ["Poppins"]
+        sans: ["Poppins", "sans-serif"],
       },
 
       screens: {

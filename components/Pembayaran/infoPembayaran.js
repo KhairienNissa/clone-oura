@@ -1,8 +1,10 @@
 import React from 'react'
 
 function InfoPembayaran({item}) {
+  
   return (
     <div>
+      
       <div className="my-3 mx-5 p-3 rounded-md bg-[#D0D0D0] ">
               <div className="grid grid-cols-2 py-1">
               <div className="text-[#515151]text-l font-bold flex items-center ">
