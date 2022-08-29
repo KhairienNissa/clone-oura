@@ -121,10 +121,8 @@ function Navbar() {
                   </div>
                 </li>
                 <li className="text-white dark:text-abu-abu py-1 md:py-0 hover:text-opacity-90  text-opacity-50  hover:cursor-pointer dark:hover:font-semibold ">
-                  <div className="flex ">
-                    <div className="text-md mr-1">
-                      <BiCalculator />
-                    </div>
+                  <div >
+                    
                     <div className="-mt-0.5 text-sm ">
                       <DropDownNav />
                     </div>
