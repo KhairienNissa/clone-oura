@@ -29,7 +29,7 @@ function BottonScroll() {
 
   return (
     <div
-      className={`text-5xl text-white bg-[#BD4CAE] rounded-lg fixed bottom-6 left-3 cursor-pointer ease-in-out duration-300 ${
+      className={`text-5xl z-50 text-white bg-[#BD4CAE] rounded-lg fixed bottom-6 left-3 cursor-pointer ease-in-out duration-300 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
       onClick={scrollToTop}

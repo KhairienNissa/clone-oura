@@ -24,7 +24,7 @@ const slideImages = [
 
 function SlidePic() {
   return (
-    <div className="mt-5  lg:mx-56  slide-container ">
+    <div className="mt-8  lg:mx-56  slide-container ">
       <Fade arrows={false} duration= {2000} pauseOnHover= {false} infinite={true} transitionDuration= {500} indicators={index => <div className="border-t-4 w-11 border-white mx-0.5 active:border-gray-600 hover:cursor-pointer z-10 -mt-11"><div className="hidden ">{index+1}</div></div>} scale={1.4}>
         {slideImages.map((slideImage, index) => (
           <>

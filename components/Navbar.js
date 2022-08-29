@@ -29,11 +29,11 @@ function Navbar() {
   return (
     <div>
       <nav
-        className={`md:px-12 w-full fixed -top-1 drop-shadow-2xl font-poppins z-30 md:bg-[#212529] md:dark:bg-white`}
+        className={`md:px-11 w-full fixed -top-1 drop-shadow-2xl font-poppins z-30 md:bg-[#212529] md:dark:bg-white`}
       >
-        <div className="justify-between  mx-auto lg:max-w-7xl md:items-center md:flex md:px-8 ">
+        <div className="justify-between   mx-auto lg:max-w-7xl md:items-center md:flex md:px-4 ">
           <div className="px-4 overflow-hidden z-50  md:z-0 relative dark:bg-white bg-[#212529]">
-            <div className="flex md:flex items-center justify-between py-2 md:py-2 z-50">
+            <div className="flex md:flex items-center justify-between py-4 z-50">
               <a
                 className="hover:cursor-pointer"
                 onClick={() => Router.push("/")}

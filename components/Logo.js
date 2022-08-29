@@ -7,7 +7,7 @@ function Logoo({variant}) {
 
   return (
     <div className="text-2xl font-bold">
-        <Image src={Logo} width="80px" height="40px"/>
+        <Image src={Logo} width="78px" height="40px"/>
     </div>
   )
 }

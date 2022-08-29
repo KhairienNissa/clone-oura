@@ -55,7 +55,7 @@ export default function MyModal() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="dark:bg-white  bg-[#212529] h-[90vh] lg:h-[95vh] md:w-[800px] transform overflow-y-scroll rounded-md p-4 text-left align-middle shadow-3xl transition-all">
+                <Dialog.Panel className="dark:bg-white  bg-[#212529] h-[90vh] lg:h-[95vh] max-h-[1000px] md:w-[800px] transform overflow-y-scroll rounded-md p-4 text-left align-center shadow-3xl transition-all">
                   <div className="border-2 border-abu-abu rounded-sm">
                     <Dialog.Title className="text-lg w-full h-auto px-2 pt-2 pb-3 rounded-t-sm bg-abu-abu text-white  ">
                       PERHATIKAN

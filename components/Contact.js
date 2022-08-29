@@ -15,7 +15,7 @@ function Contact() {
           setIsActive(true);
         }}
         onMouseLeave={() => setIsActive(false)}
-        className="flex flex-col-reverse gap-2 fixed bottom-16 right-3"
+        className="flex flex-col-reverse gap-2 z-50 fixed bottom-16 right-3"
       >
         <div
           className={`w-[47px] h-[47px] bg-slate-200 p-1 rounded-lg cursor-pointer z-10}`}
