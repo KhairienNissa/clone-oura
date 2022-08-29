@@ -128,9 +128,6 @@ function Navbar() {
                     <div className="-mt-0.5 text-sm ">
                       <DropDownNav />
                     </div>
-                    <div className="-mt-0.5 text-lg">
-                      <MdOutlineArrowDropDown />
-                    </div>
                   </div>
                 </li>
               </ul>
