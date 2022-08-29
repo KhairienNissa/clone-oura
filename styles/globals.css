@@ -25,7 +25,3 @@ input:focus {
 }
 
 
-
-.answer_wrapper {
-  transition: height ease 400ms;
-}

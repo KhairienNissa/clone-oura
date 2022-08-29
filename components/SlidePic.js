@@ -27,7 +27,7 @@ function SlidePic() {
       <Slide
         arrows={false}
         duration={2000}
-        pauseOnHover={false}
+        // pauseOnHover={false}
         infinite={true}
         transitionDuration={500}
         indicators={(index) => (
