@@ -21,19 +21,33 @@ const slideImages = [
   },
 ];
 
-
 function SlidePic() {
   return (
     <div className="mt-8  lg:mx-56  slide-container ">
-      <Fade arrows={false} duration= {2000} pauseOnHover= {false} infinite={true} transitionDuration= {500} indicators={index => <div className="border-t-4 w-11 border-white mx-0.5 active:border-gray-600 hover:cursor-pointer z-10 -mt-11"><div className="hidden ">{index+1}</div></div>} scale={1.4}>
+      <Slide
+        arrows={false}
+        duration={2000}
+        pauseOnHover={false}
+        infinite={true}
+        transitionDuration={500}
+        indicators={(index) => (
+          <div className="border-t-4 w-11 border-white mx-0.5 active:border-gray-600 hover:cursor-pointer z-10 -mt-11">
+            <div className="hidden ">{index + 1}</div>
+          </div>
+        )}
+        scale={1.4}
+      >
         {slideImages.map((slideImage, index) => (
           <>
             <div className="each-slide" key={index}>
-              <img className="object-contain w-full d-block" src={slideImage.url} />
+              <img
+                className="object-contain w-full d-block"
+                src={slideImage.url}
+              />
             </div>
           </>
         ))}
-      </Fade>
+      </Slide>
     </div>
   );
 }
