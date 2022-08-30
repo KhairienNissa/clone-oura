@@ -8,6 +8,13 @@
     
   }
 
+.answer_wrapper.open {
+  transition: height ease 700ms;
+}
+.answer_wrapper {
+  transition: height ease 700ms;
+}
+
 input:focus {
   outline : none;
     border : 5px solid #a3c8fe !important;

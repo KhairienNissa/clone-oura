@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FaStore } from "react-icons/fa";
 import { RiArrowDropUpLine } from "react-icons/ri";
 import { RiArrowDropDownLine } from "react-icons/ri";
@@ -12,42 +12,49 @@ import { Transition } from "@headlessui/react";
 
 function Convenience({ satu, active }) {
   // const [active, setActive] = useState(false);
+  
+  const contentAnimation = useRef();
+
+
   return (
-    <div>
-      <div className=" mt-3  border-gray-500 shadow-2xl rounded-md mx-1 border hover:border-orange-200 hover:cursor-pointer relative overflow-hidden">
-        <div
-          onClick={satu}
-          className=" bg-abu-muda dark:bg-white p-3 grid grid-cols-2 rounded-t-lg overflow-hidden relative z-10"
-        >
-          <div className="text-white dark:text-black  font-bold flex mt-2">
-            <FaStore />
-            <p className="-mt-1 ml-2 text-md ">Convenience Store</p>
+    <div className="mt-4 dark:border-gray-300 dark:hover:border-orange-200    border-gray-600 shadow-2xl rounded-md mx-4 border hover:border-orange-200 hover:cursor-pointer">
+      <div
+        className={`bg-[#F5FAFF]  rounded-lg 
+            ${active ? "active" : ""}`}
+      >
+        <div className="p-2 dark:bg-white rounded-t-md flex justify-between cursor-pointer bg-abu-muda" onClick={satu}>
+          <div className=" font-semibold ">
+            <div className="text-white  font-bold flex dark:text-black mt-2">
+              <FaStore />
+              <p className="-mt-1 ml-2 dark:text-black text-md">
+               Convenience
+              </p>
+            </div>
           </div>
-          <div className="text-white text-sm flex mt-1 justify-end  dark:text-black ">
+          <div className="text-white text-sm flex mt-1 justify-end dark:text-black ">
             Rp. 140.000
           </div>
         </div>
 
-        <Transition
-          show={active}
-          enter="transition ease-in-out duration-700 transform"
-          enterFrom="-translate-y-full"
-          enterTo="translate-y-0"
-          leave="transition ease-in-out duration-300 transform"
-          leaveFrom="translate-y-0"
-          leaveTo="-translate-y-full"
-          className={`bg-[#212529] md:bg-transparent  px-4 -z-10 dark:bg-white`}
+        <div
+          ref={contentAnimation}
+          className={`answer_wrapper h-0 overflow-hidden ${
+            active ? "open" : ""
+          } `}
+          style={
+            active
+              ? { height: contentAnimation.current.scrollHeight }
+              : { height: "0px" }
+          }
         >
-          {/* bagian dalam */}
-          <div>
-            {ConvenienceData.map((item, index) => (
-              <InfoPembayaran item={item} key={index} />
-            ))}
-          </div>
-        </Transition>
+        
+          {ConvenienceData.map((item, index) => (
+            <InfoPembayaran item={item} key={index} />
+          ))}
+        </div>
         <div
           onClick={satu}
-          className="bg-abu-abu dark:bg-neutral-300 py-4 px-2 flex justify-end rounded-b-md"
+          className="bg-abu-abu dark:bg-neutral-300 py-2 px-2 flex flex-wrap justify-end rounded-b-md"
         >
           {ConvenienceData.map((item, index) => (
             <BgMethode
@@ -56,15 +63,15 @@ function Convenience({ satu, active }) {
               className={`${active && "hidden"}`}
             />
           ))}
-          <div className="text-xl hover:cursor-pointer" onClick={satu}>
+          <div className="text-xl hover:cursor-pointer">
             {active ? (
               <div className="text-2xl text-[#414141]">
                 <MdOutlineKeyboardArrowUp />
               </div>
             ) : (
               <div className="text-2xl text-[#414141]">
-              <MdOutlineKeyboardArrowDown />
-               </div>
+                <MdOutlineKeyboardArrowDown />
+              </div>
             )}
           </div>
         </div>

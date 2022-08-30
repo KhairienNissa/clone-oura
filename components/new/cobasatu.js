@@ -1,32 +1,35 @@
-import React, { useState, useRef } from "react";
-import { AiFillCreditCard } from "react-icons/ai";
-import { RiArrowDropUpLine } from "react-icons/ri";
-import { RiArrowDropDownLine } from "react-icons/ri";
+import React, { useState } from "react";
+import { useRef } from "react";
+import { AiFillBank } from "react-icons/ai";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
-import { VirtualaccData } from "../dataDummy/VirtualaccData";
 import BgMethode from "../atom/bgMethode";
 import InfoPembayaran from "../Pembayaran/infoPembayaran";
-import { Transition } from "@headlessui/react";
 
-function VirtualAcc({satu, active}) {
-  // const [active, setActive] = useState(false);
-  
+const Cobasatu = ({ active, onToggle }) => {
+  const item = [
+    {
+      name: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/2560px-Bank_Central_Asia.svg.png",
+      name2: "Bank BCA",
+      data: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/2560px-Bank_Central_Asia.svg.png",
+    },
+  ];
+
   const contentAnimation = useRef();
 
 
   return (
-    <div className="mt-4  border-gray-600 dark:hover:border-orange-200   dark:border-gray-300  shadow-2xl rounded-md mx-4 border hover:border-orange-200 hover:cursor-pointer">
-      <div
+    <div className="mt-3  border-gray-300 shadow-2xl rounded-md mx-1 border hover:border-orange-200 hover:cursor-pointer">
+      <li
         className={`bg-[#F5FAFF]  rounded-lg 
             ${active ? "active" : ""}`}
       >
-        <div className="p-2 flex justify-between cursor-pointer dark:bg-white bg-abu-muda rounded-t-md" onClick={satu}>
+        <div className="p-3 flex justify-between cursor-pointer bg-abu-muda" onClick={onToggle}>
           <div className=" font-semibold ">
             <div className="text-white  font-bold flex dark:text-black mt-2">
-              <AiFillCreditCard />
+              <AiFillBank />
               <p className="-mt-1 ml-2 dark:text-black text-md">
-                Virtual Account
+                Transfer Bank
               </p>
             </div>
           </div>
@@ -37,7 +40,7 @@ function VirtualAcc({satu, active}) {
 
         <div
           ref={contentAnimation}
-          className={`answer_wrapper dark:bg-white bg-abu-muda h-0 overflow-hidden ${
+          className={`answer_wrapper h-0 overflow-hidden ${
             active ? "open" : ""
           } `}
           style={
@@ -46,16 +49,18 @@ function VirtualAcc({satu, active}) {
               : { height: "0px" }
           }
         >
-        
-          {VirtualaccData.map((item, index) => (
+          <div className="pt-2">
+            <div className="h-[1px] bg-slate-200  px-5"></div>
+          </div>
+          {item.map((item, index) => (
             <InfoPembayaran item={item} key={index} />
           ))}
         </div>
         <div
-          onClick={satu}
-          className="bg-abu-abu  dark:bg-neutral-300 py-2 px-2 flex flex-wrap justify-end rounded-b-md"
+          onClick={onToggle}
+          className="bg-abu-abu dark:bg-neutral-300 py-4 px-2 flex flex-wrap justify-end rounded-b-md"
         >
-          {VirtualaccData.map((item, index) => (
+          {item.map((item, index) => (
             <BgMethode
               item={item}
               key={index}
@@ -74,9 +79,9 @@ function VirtualAcc({satu, active}) {
             )}
           </div>
         </div>
-      </div>
+      </li>
     </div>
   );
-}
+};
 
-export default VirtualAcc;
+export default Cobasatu;
