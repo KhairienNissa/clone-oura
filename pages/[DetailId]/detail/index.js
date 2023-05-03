@@ -13,21 +13,28 @@ import FixedButton from "../../../components/FixedButton";
 
 function Index() {
   const router = useRouter();
-  const id = router.query.DetailId;
+  // const id = router.query.DetailId;
 
-  const [state, setState] = useState([]);
-  useEffect(() => {
-    axios
-      .get(`https://caca-db-oura.herokuapp.com/data/${id}`)
-      .then((result) => {
-        const response = result?.data;
-        console.log(response);
-        setState(response);
-      })
-      .catch((err) => {
-        console.log("error", err);
-      });
-  }, [id]);
+  // const [state, setState] = useState([]);
+  // useEffect(() => {
+  //   axios
+  //     .get(`https://caca-db-oura.herokuapp.com/data/${id}`)
+  //     .then((result) => {
+  //       const response = result?.data;
+  //       console.log(response);
+  //       setState(response);
+  //     })
+  //     .catch((err) => {
+  //       console.log("error", err);
+  //     });
+  // }, [id]);
+
+  const state = {
+    id: 1,
+    title: "Mobile Legend",
+    image:
+      "https://play-lh.googleusercontent.com/IhUVzRkz5MokalaeiLulcloc8rxROw0fSPRC7-Lc5zCF_wIfhbxo3qsOjKxYp524B1dY",
+  };
 
   return (
     <>
